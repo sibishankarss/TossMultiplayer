@@ -37,9 +37,10 @@
             android:textSize="@dimen/text_size"
             app:layout_constraintBottom_toTopOf="@+id/startButton"
             app:layout_constraintEnd_toStartOf="@+id/configPlayer2Name"
+            app:layout_constraintHorizontal_bias="0.539"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/player1"
-            app:layout_constraintVertical_bias="0.16000003" />
+            app:layout_constraintVertical_bias="0.156" />
 
         <EditText
             android:id="@+id/configPlayer1Name"

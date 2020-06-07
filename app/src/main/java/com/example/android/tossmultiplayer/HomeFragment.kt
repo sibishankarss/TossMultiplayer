@@ -20,6 +20,9 @@ class HomeFragment : Fragment() {
         binding.playButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_homeFragment_to_configFragment)
         }
+        binding.howToPlay.setOnClickListener{view: View ->
+            view.findNavController().navigate(R.id.action_homeFragment_to_helpFragment)
+        }
         return binding.root
     }
 }

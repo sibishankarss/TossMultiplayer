@@ -7,75 +7,26 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/tossButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_rounded"
-            android:clickable="false"
-            android:text="@string/toss_button"
-            android:visibility="invisible"
-            app:layout_constraintBaseline_toBaselineOf="@+id/tossButton2"
-            app:layout_constraintStart_toStartOf="@+id/player1Choice" />
-
-        <RadioGroup
-            android:id="@+id/player1Choice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/tossButton1"
-            app:layout_constraintStart_toStartOf="@+id/choiceMessage1"
-            app:layout_constraintTop_toBottomOf="@+id/choiceMessage1">
-
-            <RadioButton
-                android:id="@+id/player1Head"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/head" />
-
-            <RadioButton
-                android:id="@+id/player1Tail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/tail" />
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/configPlayer1Name"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_value"
-            android:maxLength="50"
-            android:textSize="@dimen/play_fragment_font_size"
-            app:layout_constraintBaseline_toBaselineOf="@+id/configPlayer2Name"
-            app:layout_constraintStart_toStartOf="parent" />
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/configPlayer2Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="220dp"
-            android:layout_marginEnd="@dimen/margin_value"
-            android:maxLength="50"
             android:gravity="end"
+            android:maxLength="50"
             android:textSize="@dimen/play_fragment_font_size"
-            app:layout_constraintBottom_toTopOf="@+id/choiceMessage2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/score2"
+            app:layout_constraintEnd_toEndOf="@+id/score2"
+            app:layout_constraintTop_toBottomOf="@+id/wonMessage" />
 
         <TextView
             android:id="@+id/choiceMessage2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             app:layout_constraintBottom_toTopOf="@+id/player2Choice"
-            app:layout_constraintEnd_toEndOf="@+id/configPlayer2Name"
-            app:layout_constraintTop_toBottomOf="@+id/configPlayer2Name" />
+            app:layout_constraintEnd_toEndOf="@+id/player2Choice"
+            app:layout_constraintTop_toBottomOf="@+id/score2" />
 
         <RadioGroup
             android:id="@+id/player2Choice"
@@ -84,7 +35,7 @@
             android:orientation="horizontal"
             android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/tossButton2"
-            app:layout_constraintEnd_toEndOf="@+id/choiceMessage2"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/choiceMessage2">
 
             <RadioButton
@@ -106,8 +57,8 @@
             android:layout_height="52dp"
             android:background="@drawable/button_rounded"
             android:text="@string/toss_button"
-            app:layout_constraintBottom_toTopOf="@+id/score2"
-            app:layout_constraintEnd_toEndOf="@+id/player2Choice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/player2Choice" />
 
         <TextView
@@ -116,46 +67,37 @@
             android:layout_height="wrap_content"
             android:background="@android:drawable/editbox_dropdown_light_frame"
             android:text="@string/start_score"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/tossButton2"
-            app:layout_constraintTop_toBottomOf="@+id/tossButton2" />
+            app:layout_constraintBottom_toTopOf="@+id/choiceMessage2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/configPlayer2Name" />
 
         <ImageView
             android:id="@+id/headMessage"
             android:layout_width="205dp"
             android:layout_height="174dp"
-            android:layout_marginStart="@dimen/margin_value"
-            android:layout_marginEnd="@dimen/margin_value"
+            android:contentDescription="@string/empty_string"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/empty_string" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/wonMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_value"
-            android:layout_marginEnd="@dimen/margin_value"
-            android:layout_marginBottom="450dp"
             android:textSize="@dimen/text_size"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/configPlayer1Name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.529"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/headMessage"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/headMessage" />
 
         <TextView
-            android:id="@+id/score1"
-            android:layout_width="wrap_content"
+            android:id="@+id/configPlayer1Name"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:background="@android:drawable/editbox_dropdown_light_frame"
-            android:text="@string/start_score"
-            app:layout_constraintBaseline_toBaselineOf="@+id/score2"
-            app:layout_constraintStart_toStartOf="@+id/tossButton1" />
+            android:maxLength="50"
+            android:textSize="@dimen/play_fragment_font_size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/configPlayer2Name"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/choiceMessage1"
@@ -163,7 +105,49 @@
             android:layout_height="wrap_content"
             android:text="@string/choiceMessage"
             app:layout_constraintBaseline_toBaselineOf="@+id/choiceMessage2"
-            app:layout_constraintStart_toStartOf="@+id/configPlayer1Name" />
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/player1Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/tossButton1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choiceMessage1">
+
+            <RadioButton
+                android:id="@+id/player1Head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/head" />
+
+            <RadioButton
+                android:id="@+id/player1Tail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tail" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/tossButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rounded"
+            android:clickable="false"
+            android:text="@string/toss_button"
+            android:visibility="invisible"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tossButton2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/score1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_dropdown_light_frame"
+            android:text="@string/start_score"
+            app:layout_constraintBaseline_toBaselineOf="@+id/score2"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/turnChecker"
