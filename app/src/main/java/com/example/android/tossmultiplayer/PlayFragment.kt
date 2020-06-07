@@ -22,23 +22,23 @@ class PlayFragment : Fragment() {
             R.layout.fragment_play, container, false
         )
         args = PlayFragmentArgs.fromBundle(requireArguments())
-        binding.configPlayer1Name.text = args.name1
-        binding.configPlayer2Name.text = args.name2
+        binding.configPlayer1Name.text = args.name1.capitalize()
+        binding.configPlayer2Name.text = args.name2.capitalize()
 
         binding.tossButton1.setOnClickListener { view: View ->
             val checkedId = binding.player2Choice.checkedRadioButtonId
             if (checkedId != -1) {
-                calculateScore(args.name1, args.name2)
+                calculateScore(args.name1.capitalize(), args.name2.capitalize())
                 createVisibleOptions()
                 if ((binding.score1.text.toString().toInt() >= 10) && args.name1.isNotBlank()) {
                     view.findNavController().navigate(
-                        PlayFragmentDirections.actionPlayFragmentToResultFragment(args.name1)
+                        PlayFragmentDirections.actionPlayFragmentToResultFragment(args.name1.capitalize())
                     )
                 } else if ((binding.score2.text.toString()
                         .toInt() >= 10) && args.name1.isNotBlank()
                 ) {
                     view.findNavController().navigate(
-                        PlayFragmentDirections.actionPlayFragmentToResultFragment(args.name2)
+                        PlayFragmentDirections.actionPlayFragmentToResultFragment(args.name2.capitalize())
                     )
                 }
             }
@@ -50,17 +50,17 @@ class PlayFragment : Fragment() {
         binding.tossButton2.setOnClickListener { view: View ->
             val checkedId = binding.player1Choice.checkedRadioButtonId
             if (checkedId != -1) {
-                calculateScore(args.name1, args.name2)
+                calculateScore(args.name1.capitalize(), args.name2.capitalize())
                 createVisibleOptions()
                 if ((binding.score1.text.toString().toInt() >= 10) && args.name1.isNotBlank()) {
                     view.findNavController().navigate(
-                        PlayFragmentDirections.actionPlayFragmentToResultFragment(args.name1)
+                        PlayFragmentDirections.actionPlayFragmentToResultFragment(args.name1.capitalize())
                     )
                 } else if ((binding.score2.text.toString()
                         .toInt() >= 10) && args.name2.isNotBlank()
                 ) {
                     view.findNavController().navigate(
-                        PlayFragmentDirections.actionPlayFragmentToResultFragment(args.name2)
+                        PlayFragmentDirections.actionPlayFragmentToResultFragment(args.name2.capitalize())
                     )
                 }
             }
