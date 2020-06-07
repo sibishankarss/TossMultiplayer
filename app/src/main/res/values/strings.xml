@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Toss Multiplayer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="start_text">TOSS GAME</string>
+    <string name="player_1_name">"Player 1 "</string>
+    <string name="player_2_name">Player 2</string>
+    <string name="play_button">Play</string>
+    <string name="start_button" >Start</string>
+    <string name="config_text">Player Details</string>
+    <string name="head">Head</string>
+    <string name="tail">Tails</string>
+    <string name="toss_button">Toss</string>
+    <string name="tails_message">It\'s Tails</string>
+    <string name="heads_message">It\'s Heads</string>
+    <string name="won_text">You Won</string>
+    <string name="loss_text">You Lost</string>
+    <string name="score">Score</string>
+    <string name="choiceMessage">It\'s Your Turn, Choose Your Option</string>
+    <string name="start_score">0</string>
+    <string name="empty_string" />
+    <string name="player_1_win_message">Player 1 Won The Turn</string>
+    <string name="player_2_win_message">Player 2 Won The Turn</string>
+    <string name="play_again">Play Again</string>
+    <string name="won_message">Player Won The Game</string>
+
+</resources>
