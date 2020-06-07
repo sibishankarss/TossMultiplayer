@@ -1,4 +1,4 @@
-# TossMultiplayer - 30days of kotlin
+# TossMultiplayer - 30days of kotlin Program 
 How To Play:
 Enter both the players name
 Each player will be given alternate chances to choose heads/tails option & to toss the coin as well
