@@ -53,7 +53,7 @@
             android:id="@+id/action_resultFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
         <argument
-            android:name="winner_name"
+            android:name="winnerName"
             app:argType="string" />
     </fragment>
 </navigation>
